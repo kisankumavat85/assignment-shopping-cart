@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <div className='navbar-div'>
-      {location.pathname == '/' ? <Link to='/cart' className="menu">Cart</Link> : <Link to='/' className="menu">Products</Link>}
+      {location.pathname === '/' ? <Link to='/cart' className="menu">Cart</Link> : <Link to='/' className="menu">Products</Link>}
     </div>
   )
 }
