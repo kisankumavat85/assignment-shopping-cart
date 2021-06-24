@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import './ProductCard.css'
 import { addToCart } from '../actions/cart'
+import { addSumOfItem } from '../actions/sumOfItem'
+
 
 const ProductCard = ({ product }) => {
 
@@ -18,6 +20,7 @@ const ProductCard = ({ product }) => {
       window.confirm("Already Added item...")
     } else {
       dispatch(addToCart(product))
+      dispatch(addSumOfItem(product.productPrice))
     }
   }
 

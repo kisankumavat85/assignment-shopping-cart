@@ -1,12 +1,16 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 import './Navbar.css'
 
 const Navbar = () => {
+
+  const location = useLocation()
+  console.log(location);
+
   return (
     <div className='navbar-div'>
-      <Link to='/cart' className="menu">Cart</Link>
+      {location.pathname == '/' ? <Link to='/cart' className="menu">Cart</Link> : <Link to='/' className="menu">Products</Link>}
     </div>
   )
 }
